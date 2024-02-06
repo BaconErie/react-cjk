@@ -1,0 +1,25 @@
+{
+  "name": "react-cjk",
+  "version": "1.0.0",
+  "description": "Renders hanzi/kanji/hanja characters and their respective Chinese (Traditional and Simplified), Japanese and Korean stroke orders",
+  "main": "react-cjk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaconErie/react-cjk.git"
+  },
+  "keywords": [
+    "stroke-order",
+    "hanja",
+    "hanzi",
+    "kanji"
+  ],
+  "author": "BaconErie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BaconErie/react-cjk/issues"
+  },
+  "homepage": "https://github.com/BaconErie/react-cjk#readme"
+}
