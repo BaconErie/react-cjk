@@ -54,5 +54,10 @@ Each strokeId key has a corresponding Settings Dictionary as its value. Here are
 
 - isAnimated
     - bool; if false, the stroke is displayed instantly
-- strokeColor
-    - string; hex color value of what color to set the stroke to
+
+- css
+    - dictionary; custom CSS settings for every path. This should be what you would put for the style prop in a normal React component. This setting overrides the stroke color setting.
+    For example, if you want to color all the paths blue, you can set the settings dictionary to 
+    ```js
+    {css: {fill: 'red'}}
+    ```

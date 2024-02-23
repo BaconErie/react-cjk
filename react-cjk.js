@@ -51,7 +51,7 @@ export function CharacterSVG({character, source, strokesDisplayed, onStrokeCompl
     setStrokeData(newStrokeData);
 
     await onStrokesDisplayedChange(newStrokeData);
-}
+  }
 
   useEffect(() => {
     onCharacterChange();
@@ -69,12 +69,12 @@ export function CharacterSVG({character, source, strokesDisplayed, onStrokeCompl
   useEffect(() => {
     onStrokesDisplayedChange(strokeData);
   }, [strokesDisplayed]);
+  
+  const pathComponents = Object.entries(strokesDisplayed).map(entry => <path key={entry[0]} d={displayedSVG[entry[0]]} style={entry[1].css}/>);
 
   return (<svg viewBox={'0 0 1024 1024'} {...otherProps}>
     <g transform={'scale(1, -1) translate(0, -900)'}>
-      {
-        displayedSVG.map((data, index) => <path key={index} d={data} /> )
-      }
+      {pathComponents}
     </g>
   </svg>)
 }
