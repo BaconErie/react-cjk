@@ -52,12 +52,12 @@ Note that stroke orders change depending on the source, so the strokeId in one s
 ### Settings dictionary
 Each strokeId key has a corresponding Settings Dictionary as its value. Here are the settings you can specify for each stroke:
 
-- isAnimated
-    - bool; if false, the stroke is displayed instantly
+- animationLength
+    - int; length of time for the animation to run. Set it to 0 to make it display instantly
 
 - css
     - dictionary; custom CSS settings for every path. This should be what you would put for the style prop in a normal React component. This setting overrides the stroke color setting.
     For example, if you want to color all the paths blue, you can set the settings dictionary to 
     ```js
-    {css: {fill: 'red'}}
+    {css: {stroke: 'red'}}
     ```
