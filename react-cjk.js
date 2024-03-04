@@ -70,7 +70,16 @@ export function CharacterSVG({character, source, strokesDisplayed, onStrokeCompl
     onStrokesDisplayedChange(strokeData);
   }, [strokesDisplayed]);
   
-  const pathComponents = Object.entries(strokesDisplayed).map(entry => <path key={entry[0]} d={displayedSVG[entry[0]]} style={entry[1].css}/>);
+  let pathComponents = [];
+  for (let entry of Object.entries(strokesDisplayed)) {
+    const strokeId = entry[0];
+    const strokeSettings = entry[1];
+    const strokeSvgData = displayedSVG[strokeId];
+
+    pathComponents.push(
+      <path key={strokeId} d={strokeSvgData} style={strokeSettings.css}/>
+    )
+  }
 
   return (<svg viewBox={'0 0 1024 1024'} {...otherProps}>
     <g transform={'scale(1, -1) translate(0, -900)'}>
